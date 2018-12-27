@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <v-scroll 
+      class="scorllStyle" 
+      style='height:{{scrollHeight}}rpx'
+      bind:onPullRefresh='_pullAndRefresh'
+      needLoadMore
+      bind:onLoadMore='_loadMore'
+      >
+      <block wx:for="{{datas}}" wx:key="id" wx:for-index="idx" wx:for-item="item">
+        <view class='itemStyle'>
+          {{item}}
+        </view>
+      </block>
+    </v-scroll>
+</view>
